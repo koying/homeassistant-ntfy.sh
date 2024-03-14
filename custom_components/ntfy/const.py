@@ -1,0 +1,5 @@
+DOMAIN = "ntfy"
+
+CONF_TOPIC = 'topic'
+
+GET_IMAGE_TIMEOUT = 10

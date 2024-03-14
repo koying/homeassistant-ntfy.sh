@@ -7,8 +7,7 @@ from homeassistant.const import (
     CONF_TOKEN,
     CONF_ICON
 )
-
-CONF_TOPIC = 'topic'
+from .const import CONF_TOPIC
 
 import homeassistant.helpers.config_validation as cv
 from homeassistant.components.notify import (
@@ -20,9 +19,9 @@ from homeassistant.components.notify import (
 )
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
+    vol.Required(CONF_TOPIC): cv.string,
     vol.Optional(CONF_URL): cv.url,
     vol.Optional(CONF_TOKEN): cv.string,
-    vol.Optional(CONF_TOPIC): cv.string,
     vol.Optional(CONF_ICON): cv.url
 })
 _LOGGER = logging.getLogger(__name__)
